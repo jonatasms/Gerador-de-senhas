@@ -10,28 +10,20 @@
     
     <p>Utilize nosso gerador online para criar uma senha forte e segura.</p>
 
-    <input type="password" id="password"></input>
+    <input type="text" id="password"></input>
 
-    <input type="range" name="password-length" id="password-length"></input>
+    <input  
+        type="range" 
+        name="password-length" 
+        id="password-length"
+        value = "16"
+        min = "4"
+        max = "64">
+    </input>
 
-    <button>Copiar senha</button>
+    <button id="copy">Copiar senha</button>
 
-    <script>
-        function generatePassword() {
-            const chars = 
-            "abcdefghjkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ123456789?!@&*()[]"
-            
-            let password =""
-
-            for (let i = 0; i < 8; i++){
-                const randomNumber = Math.floor(Math.random() * chars.length)
-                password += chars.substring(randomNumber, randomNumber +1)
-            }
-
-            console.log(password)
-        
-        }
-        generatePassword()
+    <script src="./js/script.js">    
     </script>
 </body>
 </html>
